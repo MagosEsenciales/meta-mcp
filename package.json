@@ -6,9 +6,8 @@
   "type": "module",
   "bin": {
     "meta-ads-mcp": "build/index.js"
-  },
-  "scripts": {
-    "build": "tsc",
+},
+  "scripts": {"build": "esbuild src/index.ts --bundle --platform=node --format=esm --outfile=build/index.js --external:dotenv --external:@modelcontextprotocol/sdk --external:@vercel/mcp-adapter --external:@vercel/kv --external:redis --external:jose --external:node-fetch --external:zod",
     "dev": "tsx src/index.ts",
     "dev:vercel": "vercel dev",
     "test": "jest",
