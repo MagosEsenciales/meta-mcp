@@ -1,5 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "installCommand": "npm install",
+  "buildCommand": "npm run build",
   "functions": {
     "api/mcp.ts": {
       "maxDuration": 60
@@ -40,8 +42,6 @@
     {
       "source": "/mcp",
       "destination": "/api/mcp"
-      "installCommand": "npm install",
-"buildCommand": "npm run build"
     },
     {
       "source": "/dashboard",
